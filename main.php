@@ -1,5 +1,6 @@
 <?php
-include("./includes/header.php");
+  //header da página
+  include("./includes/header.php");
 ?>
         <!-- page content -->
         <div class="right_col" role="main">
@@ -54,6 +55,7 @@ include("./includes/header.php");
         <!-- /page content -->
 
 <?php
+//footer da página
 include("./includes/footer.php");
 ?>        
 
