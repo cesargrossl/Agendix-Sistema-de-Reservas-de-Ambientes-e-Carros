@@ -45,7 +45,7 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                      Add content to the page ...
+                      Add content to the page cesar ...
                   </div>
                 </div>
               </div>
