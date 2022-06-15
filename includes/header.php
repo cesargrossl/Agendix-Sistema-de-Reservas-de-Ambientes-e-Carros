@@ -1,8 +1,8 @@
 <?php
   //Conecão PDO com o banco
   $db_valida = "srv_portal";
-  include_once("./gentelella/includes/db_banco.php");
-  include_once("./gentelella/includes/pdo_conexao.php");
+  include_once("./includes/db_banco.php");
+  include_once("./includes/pdo_conexao.php");
   $db = new DB();
 
   $db->AbreConexao('portal');
