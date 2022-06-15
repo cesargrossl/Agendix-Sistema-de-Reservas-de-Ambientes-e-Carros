@@ -1,6 +1,7 @@
 <?php
   //header da página
   include("./includes/header.php");
+
 ?>
         <!-- page content -->
         <div class="right_col" role="main">
@@ -23,7 +24,7 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                      Add content to the page cesar ...
+                      Add content to the page  ...
                   </div>
                 </div>
               </div>
