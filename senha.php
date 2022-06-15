@@ -35,19 +35,20 @@
         <div class="animate form login_form">
           <section class="login_content">
             <form>
-              <h1>Agendix - Login</h1>
+              <h1>Agendix</h1>
+              <div>
+               Esqueceu sua senha! Informe seu usuário ou email e clique em enviar, você receberá um email com dados para recuperação!
+              </div>
               <div>
                 <span id="div_mensagem"></span>
               </div>
               <div>
-                <input type="text" id="log_usuario"class="form-control" placeholder="Usuário" required="" />
+                <input type="text" id="log_usuario"class="form-control" placeholder="usuário ou email" required="" />
               </div>
+              
               <div>
-                <input type="password"  id="log_senha" class="form-control" placeholder="Senha" required="" />
-              </div>
-              <div>
-                <button type="button" id="log_acessar" class="btn btn-secondary">logar</button>
-                <a class="reset_pass" href="senha.php">Esqueceu sua senha?</a>
+                <button type="button" id="log_acessar" class="btn btn-secondary">Enviar</button>
+                <a class="reset_pass" href="index.php">Voltar inicio?</a>
               </div>
               <div class="clearfix"></div>
             </form>
@@ -79,7 +80,7 @@
         success: function(retorno) {
           $('#div_mensagem').html('');
           if (retorno.token == 'valido' && retorno.login == 'valido') {
-            location.href='frm_principal.php';
+            location.href='main.php';
           }else if(retorno.token == 'invalido'){
             $('#div_mensagem').html('Token Incorreto');
             $('#div_mensagem').css({'color':'red','text-align':'center'});
