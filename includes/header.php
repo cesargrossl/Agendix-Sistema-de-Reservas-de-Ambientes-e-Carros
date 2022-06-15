@@ -1,8 +1,8 @@
 <?php
   //Conecão PDO com o banco
   $db_valida = "srv_portal";
-  include_once("./includes/db_banco.php");
-  include_once("./includes/pdo_conexao.php");
+  include_once("./gentelella/includes/db_banco.php");
+  include_once("./gentelella/includes/pdo_conexao.php");
   $db = new DB();
 
   $db->AbreConexao('portal');
@@ -29,14 +29,14 @@
     <title>Sistema de Agendamento | Agendix - Carros & Ambientes </title>
 
     <!-- Bootstrap -->
-    <link href="./vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="./vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./gentelella/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="./vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="./gentelella/vendors/nprogress/nprogress.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="./build/css/custom.min.css" rel="stylesheet">
+    <link href="./gentelella/build/css/custom.min.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -53,7 +53,7 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="./build/images/img.jpg" alt="..." class="img-circle profile_img">
+                <img src="./gentelella/build/images/img.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
@@ -98,7 +98,7 @@
                 <ul class=" navbar-right">
                   <li class="nav-item dropdown open" style="padding-left: 15px;">
                     <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                      <img src="./build/images/img.jpg" alt="">John Doe
+                      <img src="./gentelella/build/images/img.jpg" alt="">John Doe
                     </a>
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item"  href="javascript:;"> Profile</a>
@@ -116,7 +116,7 @@
                     <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
                       <li class="nav-item">
                         <a class="dropdown-item">
-                          <span class="image"><img src="./build/images/img.jpg" alt="Profile Image" /></span>
+                          <span class="image"><img src="./gentelella/build/images/img.jpg" alt="Profile Image" /></span>
                           <span>
                             <span>John Smith</span>
                             <span class="time">3 mins ago</span>
@@ -128,7 +128,7 @@
                       </li>
                       <li class="nav-item">
                         <a class="dropdown-item">
-                          <span class="image"><img src="./build/images/img.jpg" alt="Profile Image" /></span>
+                          <span class="image"><img src="./gentelella/build/images/img.jpg" alt="Profile Image" /></span>
                           <span>
                             <span>John Smith</span>
                             <span class="time">3 mins ago</span>
@@ -140,7 +140,7 @@
                       </li>
                       <li class="nav-item">
                         <a class="dropdown-item">
-                          <span class="image"><img src="./build/images/img.jpg" alt="Profile Image" /></span>
+                          <span class="image"><img src="./gentelella/build/images/img.jpg" alt="Profile Image" /></span>
                           <span>
                             <span>John Smith</span>
                             <span class="time">3 mins ago</span>
@@ -152,7 +152,7 @@
                       </li>
                       <li class="nav-item">
                         <a class="dropdown-item">
-                          <span class="image"><img src="./build/images/img.jpg" alt="Profile Image" /></span>
+                          <span class="image"><img src="./gentelella/build/images/img.jpg" alt="Profile Image" /></span>
                           <span>
                             <span>John Smith</span>
                             <span class="time">3 mins ago</span>
