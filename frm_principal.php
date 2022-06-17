@@ -35,7 +35,7 @@
 
 <?php
 //footer da página
-include("./includes/footer.php");
+  include("./includes/footer.php");
 ?>        
 
         
