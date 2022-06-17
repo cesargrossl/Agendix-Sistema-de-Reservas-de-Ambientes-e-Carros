@@ -22,7 +22,7 @@
             $db->AbreConexao('portal');
             $qry = $db->query(" UPDATE tb_usuarios SET usu_senha ='".md5($senha)."', usu_dtsenha = '".date("Y-m-d")."' WHERE usu_login = '".$usuario."' ", "portal");
             $db->FechaConexao('portal');
-            echo $qry
+            echo $qry;
            // $json = array("tipo"=>$qry);
            // echo $retorno = json_encode($json);
         }
