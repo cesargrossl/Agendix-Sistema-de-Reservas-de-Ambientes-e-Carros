@@ -1,4 +1,6 @@
 <?php
+    header('Access-Control-Allow-Origin: *');
+    header('Content-Type: application/json;charset=utf-8;');
     //incluir, alterar ou excluir dados;
     include_once("../includes/funcoes.php");
     (isset($_POST["rotina"])) ? $rotina = trim($_POST["rotina"]) : $rotina = null;
@@ -22,9 +24,9 @@
             $db->AbreConexao('portal');
             $qry = $db->query(" UPDATE tb_usuarios SET usu_senha ='".md5($senha)."', usu_dtsenha = '".date("Y-m-d")."' WHERE usu_login = '".$usuario."' ", "portal");
             $db->FechaConexao('portal');
-            echo $qry;
-           // $json = array("tipo"=>$qry);
-           // echo $retorno = json_encode($json);
+            $ret = strval($qry);
+           $json = array("ret"=>$ret);
+           echo $retorno = json_encode($json);
         }
 
     }
