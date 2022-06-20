@@ -51,7 +51,7 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="./gentelella/build/images/img.jpg" alt="..." class="img-circle profile_img">
+                <img src="./img/user.png" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Bem vindo,</span>
@@ -96,7 +96,7 @@
                 <ul class=" navbar-right">
                   <li class="nav-item dropdown open" style="padding-left: 15px;">
                     <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                      <img src="./gentelella/build/images/img.jpg" alt=""><?php echo $_SESSION["log_nome"];?>
+                      <img src="./img/user.png" alt=""><?php echo $_SESSION["log_nome"];?>
                     </a>
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item"  href="frm_trocasenha.php">Perfil</a>
