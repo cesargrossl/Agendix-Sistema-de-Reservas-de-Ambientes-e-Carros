@@ -3,7 +3,7 @@
   include_once("./includes/funcoes.php");
   //valido se token é valido isso so ocorrer se login for valido
   (isset($_SESSION["log_token"])) ? $token = trim($_SESSION["log_token"]) : $token = null;
-  if ($token != token(date("Ymd"))){
+  if ($token != $funcoes->token(date("Ymd"))){
     echo "<script language=\"javascript\"> location.href='index.php';</script>";
     session_destroy();
     die();

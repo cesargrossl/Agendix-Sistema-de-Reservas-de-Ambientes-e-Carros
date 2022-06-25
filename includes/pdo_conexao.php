@@ -22,7 +22,7 @@
 					$this->connportal = $dbportal;
 				}
 				catch (PDOException $e) {
-					echo limpar($e->getMessage());
+					echo $funcoes->limpa($e->getMessage());
 					return false;
 				}
 			}
@@ -43,7 +43,7 @@
 					$retorna = $query->fetchAll(PDO::FETCH_ASSOC);
 					return $retorna;
 				}catch(PDOException $e) {
-					echo limpar($e->getMessage());
+					echo  $funcoes->limpa($e->getMessage());
 					return false;
 				}
 			}
@@ -56,7 +56,7 @@
 					$query = $this->connportal->prepare($this->consulta);
 					return $query->execute();
 				} catch (PDOException $e) {
-					echo limpar($e->getMessage());
+					echo  $funcoes->limpa($e->getMessage());
 					return false;
 				}
 			}

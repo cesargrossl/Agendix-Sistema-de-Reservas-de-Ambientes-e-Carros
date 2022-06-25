@@ -69,7 +69,7 @@ include("./includes/footer.php");
             cache: false,
             dataType: 'json',
             data: {
-              token: '<?php echo token(date("Ymd")) ?>',
+              token: '<?php echo $funcoes->token(date("Ymd")) ?>',
               senha: $('#per_senha').val(),
               usuario:$('#per_usuario').val(),
               rotina: 'frm_trocasenha'

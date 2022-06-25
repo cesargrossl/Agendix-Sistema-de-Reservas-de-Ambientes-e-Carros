@@ -1,6 +1,6 @@
 <?php
     //Funções para facilitar o trabalho;
-    class functions{
+    class funcoes{
         
         function token($data){
             return md5($data * 7);

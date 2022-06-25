@@ -5,7 +5,7 @@
     include_once("../includes/funcoes.php");
     (isset($_POST["rotina"])) ? $rotina = trim($_POST["rotina"]) : $rotina = null;
     (isset($_POST["token"])) ? $token = $_POST["token"] : $token = null;
-    if($token != token(date("Ymd"))){
+    if($token != $funcoes->token(date("Ymd"))){
         $token = 'invalido';
         $login = 'Não validou';
         die();
