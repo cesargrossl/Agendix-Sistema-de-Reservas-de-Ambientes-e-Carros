@@ -78,6 +78,7 @@
           log_senha: $('#log_senha').val()
         },
         success: function(retorno) {
+          console.log(retorno);
           $('#div_mensagem').html('');
           if (retorno.token == 'valido' && retorno.login == 'valido') {
             location.href='frm_principal.php';

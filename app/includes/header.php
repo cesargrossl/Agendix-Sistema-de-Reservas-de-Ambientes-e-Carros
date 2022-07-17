@@ -1,6 +1,7 @@
 <?php
   session_start();
   include_once("./includes/funcoes.php");
+  $funcoes = new funcoes();
   //valido se token é valido isso so ocorrer se login for valido
   (isset($_SESSION["log_token"])) ? $token = trim($_SESSION["log_token"]) : $token = null;
   if ($token != $funcoes->token(date("Ymd"))){

@@ -4,6 +4,7 @@
     //rotina para efetuar o login no sistema;
     include_once("../includes/funcoes.php");
     $funcoes = new funcoes();
+    session_start();
     (isset($_POST["log_token"])) ? $log_token = $_POST["log_token"] : $log_token = null;
     if($log_token != $funcoes->token(date("Ymd"))){
         $token = 'invalido';
@@ -21,11 +22,11 @@
         $qry = $db->select("SELECT usu_login, usu_nome, usu_senha FROM tb_usuarios WHERE usu_del = '' AND usu_login = '".$log_usuario."' AND usu_senha = '".md5($log_senha)."' ", "portal");
         if (count($qry)) {
             foreach ($qry as $cont_qry=>$row) {
-                session_start();
+                
                 $login = 'valido';
                 $_SESSION["log_usuario"] = $row["usu_login"];
                 $_SESSION["log_nome"] = $row["usu_nome"];
-                $_SESSION["log_token"] = token(date("Ymd"));
+                $_SESSION["log_token"] = $log_token;
                 $_SESSION["log_data"] = date("Y-m-d");
                 $_SESSION["log_senha"] = $row["usu_senha"];
             }
