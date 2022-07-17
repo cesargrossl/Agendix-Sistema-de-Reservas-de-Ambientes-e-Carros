@@ -3,18 +3,22 @@
 -- Table structure for table `tb_menu`
 --
 
+CREATE DATABASE `db_agendix`;
+USE `db_agendix`;
+--
+
 DROP TABLE IF EXISTS `tb_menu`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `tb_menu` (
   `men_id` int(11) NOT NULL AUTO_INCREMENT,
-  `men_titulo` varchar(50) DEFAULT NULL,
-  `men_icone` varchar(50) DEFAULT NULL,
-  `men_link` varchar(50) DEFAULT NULL,
-  `men_tipomenu` char(1) DEFAULT NULL,
-  `men_id_submenu` int(11) DEFAULT NULL,
-  `men_perm` char(1) DEFAULT NULL,
-  `per_del` char(1) DEFAULT NULL,
+  `men_titulo` varchar(50) DEFAULT "",
+  `men_icone` varchar(50) DEFAULT "",
+  `men_link` varchar(50) DEFAULT "",
+  `men_tipomenu` char(1) DEFAULT "",
+  `men_id_submenu` int(11) DEFAULT "",
+  `men_perm` char(1) DEFAULT "",
+  `per_del` char(1) DEFAULT "",
   PRIMARY KEY (`men_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -37,10 +41,10 @@ DROP TABLE IF EXISTS `tb_permissoes`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `tb_permissoes` (
   `per_id` int(11) NOT NULL AUTO_INCREMENT,
-  `per_id_grupo` int(11) DEFAULT NULL,
-  `per_id_menu` int(11) DEFAULT NULL,
-  `per_id_usuario` int(11) DEFAULT NULL,
-  `per_del` char(1) DEFAULT NULL,
+  `per_id_grupo` int(11) DEFAULT "",
+  `per_id_menu` int(11) DEFAULT "",
+  `per_id_usuario` int(11) DEFAULT "",
+  `per_del` char(1) DEFAULT "",
   PRIMARY KEY (`per_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -64,12 +68,12 @@ DROP TABLE IF EXISTS `tb_usuarios`;
 CREATE TABLE `tb_usuarios` (
   `usu_id` int(11) NOT NULL AUTO_INCREMENT,
   `usu_nome` varchar(250) NOT NULL,
-  `usu_email` varchar(250) DEFAULT NULL,
-  `usu_login` varchar(20) DEFAULT NULL,
-  `usu_senha` varchar(80) DEFAULT NULL,
-  `usu_dtsenha` date DEFAULT NULL,
-  `usu_tipo` varchar(45) DEFAULT NULL COMMENT 'A - Administrador, U - Usuário',
-  `usu_del` char(1) DEFAULT NULL,
+  `usu_email` varchar(250) DEFAULT "",
+  `usu_login` varchar(20) DEFAULT "",
+  `usu_senha` varchar(80) DEFAULT "",
+  `usu_dtsenha` date DEFAULT "",
+  `usu_tipo` varchar(45) DEFAULT "" COMMENT 'A - Administrador, U - Usuário',
+  `usu_del` char(1) DEFAULT "",
   PRIMARY KEY (`usu_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
