@@ -10,7 +10,7 @@ CREATE TABLE `tb_menu` (
   `men_icone` varchar(50) DEFAULT "",
   `men_link` varchar(50) DEFAULT "",
   `men_tipomenu` char(1) DEFAULT "",
-  `men_id_submenu` int(11) DEFAULT "",
+  `men_id_submenu` int(11) ,
   `men_perm` char(1) DEFAULT "",
   `per_del` char(1) DEFAULT "",
   PRIMARY KEY (`men_id`)
