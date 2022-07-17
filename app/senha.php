@@ -1,6 +1,7 @@
 <?php
   session_start();
   include_once("./includes/funcoes.php");
+  $funcoes = new funcoes();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -73,7 +74,7 @@
         cache: false,
         dataType: 'json',
         data: {
-          log_token: '<?php echo $funcoes->token(date("Ymd")) ?>',
+          log_token: '<?php echo $funcoes->token(date("Ymd")); ?>',
           log_usuario: $('#log_usuario').val(),
           log_senha: $('#log_senha').val()
         },
