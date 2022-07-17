@@ -1,6 +1,7 @@
 <?php
   session_start();
   include_once("./includes/funcoes.php");
+  $funcoes = new funcoes();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,17 +67,19 @@
       $('#div_mensagem').html('Usuário ou senha em branco!');
       $('#div_mensagem').css({'color':'red','text-align':'center'});
     }else{
+      console.log('teste1');
       $.ajax({
         type: "POST",
         url: "./includes/login.php",
         cache: false,
         dataType: 'json',
         data: {
-          log_token: '<?php echo token(date("Ymd")) ?>',
+          log_token: '<?php echo $funcoes->token(date("Ymd")); ?>',
           log_usuario: $('#log_usuario').val(),
           log_senha: $('#log_senha').val()
         },
         success: function(retorno) {
+          console.log('teste2');
           $('#div_mensagem').html('');
           if (retorno.token == 'valido' && retorno.login == 'valido') {
             location.href='frm_principal.php';

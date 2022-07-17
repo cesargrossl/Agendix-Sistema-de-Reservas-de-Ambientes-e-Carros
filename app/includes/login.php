@@ -3,8 +3,9 @@
     header('Content-Type: application/json;charset=utf-8;');
     //rotina para efetuar o login no sistema;
     include_once("../includes/funcoes.php");
+    $funcoes = new funcoes();
     (isset($_POST["log_token"])) ? $log_token = $_POST["log_token"] : $log_token = null;
-    if($log_token != token(date("Ymd"))){
+    if($log_token != $funcoes->token(date("Ymd"))){
         $token = 'invalido';
         $login = 'Não validou';
     }else{
