@@ -20,7 +20,7 @@ CREATE TABLE `tb_menu` (
   `men_perm` char(1) DEFAULT "",
   `per_del` char(1) DEFAULT "",
   PRIMARY KEY (`men_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,7 +46,7 @@ CREATE TABLE `tb_permissoes` (
   `per_id_usuario` int(11) DEFAULT "",
   `per_del` char(1) DEFAULT "",
   PRIMARY KEY (`per_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -75,7 +75,7 @@ CREATE TABLE `tb_usuarios` (
   `usu_tipo` varchar(45) DEFAULT "" COMMENT 'A - Administrador, U - Usuário',
   `usu_del` char(1) DEFAULT "",
   PRIMARY KEY (`usu_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -87,14 +87,3 @@ LOCK TABLES `tb_usuarios` WRITE;
 INSERT INTO `tb_usuarios` VALUES (1,'Cesar',NULL,'cgrossl','6ab0357358450ad998820809ff239bed','2022-06-20','A','');
 /*!40000 ALTER TABLE `tb_usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
-
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2022-07-17 17:38:02
