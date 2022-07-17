@@ -67,7 +67,6 @@
       $('#div_mensagem').html('Usuário ou senha em branco!');
       $('#div_mensagem').css({'color':'red','text-align':'center'});
     }else{
-      console.log('teste1');
       $.ajax({
         type: "POST",
         url: "./includes/login.php",
@@ -79,7 +78,6 @@
           log_senha: $('#log_senha').val()
         },
         success: function(retorno) {
-          console.log('teste2');
           $('#div_mensagem').html('');
           if (retorno.token == 'valido' && retorno.login == 'valido') {
             location.href='frm_principal.php';
