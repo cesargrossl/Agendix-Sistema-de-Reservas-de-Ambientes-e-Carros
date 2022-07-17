@@ -10,4 +10,8 @@ Utilizando o template admin Gentelella -> https://github.com/ColorlibHQ/gentelel
 
 Sistema em Desenvolvimento
 
+Para usar esse projeto em docker
+-> docker-compose up 
+no terminar Vscode
+
 
