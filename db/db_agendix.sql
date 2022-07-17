@@ -1,11 +1,7 @@
 
---
--- Table structure for table `tb_menu`
---
-
 CREATE DATABASE `db_agendix`;
 USE `db_agendix`;
---
+
 
 DROP TABLE IF EXISTS `tb_menu`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
