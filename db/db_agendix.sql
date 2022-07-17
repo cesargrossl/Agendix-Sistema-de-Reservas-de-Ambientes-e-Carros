@@ -1,6 +1,4 @@
 
-CREATE DATABASE `db_agendix`;
-USE `db_agendix`;
 
 
 DROP TABLE IF EXISTS `tb_menu`;
