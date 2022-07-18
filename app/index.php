@@ -62,6 +62,7 @@
 <script src="./gentelella/vendors/jquery/dist/jquery.min.js"></script>
 <script>
   //login no sistema faz validação;
+  $("#log_usuario").focus();
   $("#log_acessar").click(function(e) {
     logar();
   });
@@ -72,7 +73,7 @@
       logar();
     }
   });
-
+  
   $("#log_usuario").keypress(function() {
     var keycode = (event.keyCode ? event.keyCode : event.which);
     if(keycode == '13'){

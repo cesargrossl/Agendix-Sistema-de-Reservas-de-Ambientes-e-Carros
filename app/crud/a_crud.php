@@ -3,6 +3,7 @@
     header('Content-Type: application/json;charset=utf-8;');
     //incluir, alterar ou excluir dados;
     include_once("../includes/funcoes.php");
+    $funcoes = new funcoes();
     (isset($_POST["rotina"])) ? $rotina = trim($_POST["rotina"]) : $rotina = null;
     (isset($_POST["token"])) ? $token = $_POST["token"] : $token = null;
     if($token != $funcoes->token(date("Ymd"))){

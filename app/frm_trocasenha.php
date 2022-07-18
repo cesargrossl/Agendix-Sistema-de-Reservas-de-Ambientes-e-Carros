@@ -65,15 +65,16 @@ include("./includes/footer.php");
         if (senha.length < 15){
           $.ajax({
             type: "POST",
-            url: "./CRUD/a_crud.php",
+            url: "./crud/a_crud.php",
             cache: false,
             dataType: 'json',
             data: {
-              token: '<?php echo $funcoes->token(date("Ymd")) ?>',
+              token: '<?php echo $funcoes->token(date("Ymd")); ?>',
               senha: $('#per_senha').val(),
               usuario:$('#per_usuario').val(),
               rotina: 'frm_trocasenha'
             }, success: function(retorno) {
+              //console.log("teste");
               $('#div_tsaviso').show();
               if (retorno.ret == 1){
                 $('#sp_mesangem1').html('Informações alteradas com sucesso!');
