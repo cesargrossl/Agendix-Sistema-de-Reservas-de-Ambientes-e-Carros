@@ -63,6 +63,24 @@
 <script>
   //login no sistema faz validação;
   $("#log_acessar").click(function(e) {
+    logar();
+  });
+
+  $("#log_senha").keypress(function() {
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '13'){
+      logar();
+    }
+  });
+
+  $("#log_usuario").keypress(function() {
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '13'){
+      logar();
+    }
+  });
+
+  function logar(){
     if ($('#log_usuario').val() == '' || $('#log_senha').val() == ''){
       $('#div_mensagem').html('Usuário ou senha em branco!');
       $('#div_mensagem').css({'color':'red','text-align':'center'});
@@ -92,5 +110,6 @@
         }
       });
     }
-  });
+  }
+  
 </script>
