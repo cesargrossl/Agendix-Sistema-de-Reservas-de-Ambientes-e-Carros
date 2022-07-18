@@ -58,7 +58,6 @@ include("./includes/footer.php");
 <script>
   //scripts jquery e javascript;
   $(document).ready(function(){
-    
       $('#div_tsaviso').hide();
       $("#per_salvar").click(function(e) {
         var senha = $('#per_senha').val();
